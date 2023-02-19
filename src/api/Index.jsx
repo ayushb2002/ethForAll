@@ -22,6 +22,8 @@ const Index = () => {
             <span className='text-sm'>It is in best practices that the business owner link their identity to the registration key!</span>
             <br />
             <a href="/business"><button className='btn btn-success w-56'>Register here!</button></a>
+            <br />
+             <span className="text-xl font-bold">API LINK - `https://decentid-node.onrender.com`</span>
         </div>
     </div>
   )
