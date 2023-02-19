@@ -34,7 +34,14 @@ const RegisterBusiness = () => {
   const businessRegister = async (e) => {
     e.preventDefault();
     setCurReg(1);
-    var _email = await returnEmail();
+    var _email = await returnEmail(adhaar);
+    if(!_email)
+    {
+      toast.error('User does not exist in our database');
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    }
     var response = await axios.post("https://decentid-node.onrender.com/send_email_verification", {
       "email": _email
     });
