@@ -35,7 +35,6 @@ export const loginIdentity = async (_adhaar) => {
     _adhaar = `${_adhaar}`;
     try {
         const exists = await contract.loginIdentity(_adhaar);
-        alert(exists);
         if (exists)
             return true;
         else
