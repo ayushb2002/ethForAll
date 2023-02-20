@@ -46,7 +46,7 @@ const Register = () => {
     e.preventDefault();
     toast('Beginning registration process');
 
-    const exists = await identityExists();
+    const exists = await identityExists(adhaar);
     if(exists)
       {
         toast.error('Identity already exists or has been deactivated!');
@@ -68,13 +68,15 @@ const Register = () => {
 
     var adhaarVerify = await adhaarVerifyCall(formData);
     console.log(adhaarVerify)
-    if (adhaarVerify == "True") {
+    if (adhaarVerify) {
       var response = await axios.post("https://decentid-node.onrender.com/send_email_verification", {
         "email": email
       });
       console.log(response)
       setCurReg(1);
-      toast.success('Adhaar details matched successfully!');
+      setTimeout(() => {
+        toast.success('Adhaar details matched successfully!');
+      }, 1000);
     }
     else {
       toast.error("Aadhaar couldn't be verified!");
@@ -135,7 +137,12 @@ const Register = () => {
                       <label className="label">
                         <span className="label-text">Gender</span>
                       </label>
-                      <input type="text" placeholder="Male / Female" className="input input-bordered" onChange={(e) => setGender(e.target.value)} />
+                      <select id="" onChange={(e) => setGender(e.target.value)}>
+                        <option value="" selected="true" disabled="true">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                      </select>
                     </div>
                     <div className="form-control">
                       <label className="label">
