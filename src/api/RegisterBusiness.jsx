@@ -1,5 +1,4 @@
-import React, { useState, useLayoutEffect } from "react";
-import { ReactSession } from "react-client-session";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { ethers } from "ethers";
@@ -33,7 +32,6 @@ const RegisterBusiness = () => {
 
   const businessRegister = async (e) => {
     e.preventDefault();
-    setCurReg(1);
     var _email = await returnEmail(adhaar);
     if(!_email)
     {
@@ -42,6 +40,7 @@ const RegisterBusiness = () => {
         window.location.reload();
       }, 1000);
     }
+    setCurReg(1);
     var response = await axios.post("https://decentid-node.onrender.com/send_email_verification", {
       "email": _email
     });
