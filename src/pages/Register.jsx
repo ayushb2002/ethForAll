@@ -137,7 +137,7 @@ const Register = () => {
                       <label className="label">
                         <span className="label-text">Gender</span>
                       </label>
-                      <select id="" onChange={(e) => setGender(e.target.value)}>
+                      <select className="select select-bordered" onChange={(e) => setGender(e.target.value)}>
                         <option value="" selected="true" disabled="true">Select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
