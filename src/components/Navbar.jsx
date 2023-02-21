@@ -5,7 +5,7 @@ import axios from 'axios';
 function useNodeStarter(){
   React.useEffect(()=>{
       try{
-          fetch("https://decentid-node.onrender.com/send_email_verification", {
+          axios.post("https://decentid-node.onrender.com/send_email_verification", {
             'email': 'decentid@outlook.com'
           });
       }
