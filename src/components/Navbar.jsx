@@ -5,8 +5,9 @@ import axios from 'axios';
 function useNodeStarter(){
   React.useEffect(()=>{
       try{
-          axios.post("https://decentid-node.onrender.com/send_email_verification", {
-            'email': 'decentid@outlook.com'
+          axios.post("https://decentid-node.onrender.com/check_verification_code", {
+            'email': 'decentid@outlook.com',
+            'otp': 12345
           });
       }
       catch(err){
