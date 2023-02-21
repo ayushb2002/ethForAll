@@ -120,11 +120,19 @@ const Login = () => {
                       <div className="form-control mt-6">
                         <button className="btn btn-primary" onClick={async () => {
                           let val = otpRef.current.value;
+                          try
+                          {
                           var response = await axios.post("https://decentid-node.onrender.com/check_verification_code", {
                             "email": email,
                             "otp": val
                           });
-                          console.log(val);
+                          }
+                          catch(err)
+                          {
+                            console.log(err);
+                            toast.error('Invalid OTP');
+                            return;
+                          }
                           var emailVerify = response.data.res;
                           if (emailVerify) {
                             ReactSession.set('signedIn', true);
