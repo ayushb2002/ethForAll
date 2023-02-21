@@ -173,10 +173,19 @@ const Register = () => {
                       <div className="form-control mt-6">
                         <button className="btn btn-primary" onClick={async () => {
                           let val = otpRef.current.value;
+                          try
+                          {
                           var response = await axios.post("https://decentid-node.onrender.com/check_verification_code", {
                             "email": email,
                             "otp": val
                           });
+                          }
+                          catch(err)
+                          {
+                            console.log(err);
+                            toast.error('OTP invalid');
+                            return;
+                          }
                           var emailVerify = response.data.res;
                           if (emailVerify) {
                             var result = await registerIdentity(adhaar, name, dob, gender, email);
@@ -195,7 +204,7 @@ const Register = () => {
                           }
                           else
                           {
-                            toast.error('Invalid OTP!');
+                            toast.error('Server error!');
                           }
                           console.log(emailVerify);
                         }}>Verify</button>
