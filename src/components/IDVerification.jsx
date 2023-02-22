@@ -29,6 +29,7 @@ const IDVerification = () => {
     }, [])
 
     const verifyID = async () => {
+        toast('Started verification process!');
         const fileInput = document.querySelector("#id_card").files[0];
         if(image && fileInput){
           const formData = new FormData();
