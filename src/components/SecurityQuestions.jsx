@@ -62,7 +62,7 @@ const SecurityQuestions = () => {
               className="select select-error w-full max-w-xs"
               onChange={(e) => setQ1(e.target.value)}
             >
-              <option disabled defaultValue="">
+              <option disabled="true" selected="true" value="none">
                 Select security question 1
               </option>
               <option value="What is your date of birth?">
@@ -101,7 +101,7 @@ const SecurityQuestions = () => {
               className="select select-error w-full max-w-xs"
               onChange={(e) => setQ2(e.target.value)}
             >
-              <option disabled defaultValue="">
+              <option disabled="true" selected="true" value="none">
                 Select security question 2
               </option>
               <option value="What city were you born in?">
