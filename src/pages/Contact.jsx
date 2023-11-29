@@ -61,7 +61,7 @@ const Contact = () => {
           </figure>
           <div className="card-body">
             <h2 className="card-title">Shubhi Jain</h2>
-            <p>ML Developer, Web Developer</p>
+{/*             <p>ML Developer, Web Developer</p> */}
             <div className="card-actions justify-end">
               <a href="#"><button className="btn btn-primary">Contact me</button></a>
             </div>
