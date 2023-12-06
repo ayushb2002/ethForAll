@@ -20,8 +20,8 @@ const Contact = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Vedant Agnihotri</h2>
-{/*             <p>ML Developer, Blockchain developer, Web Developer</p> */}
+            <h2 className="card-title">Ayush Bansal</h2>
+            <p>ML Developer, Blockchain developer, Web Developer</p>
             <div className="card-actions justify-end">
               <a href="#"><button className="btn btn-primary">Contact me</button></a>
             </div>
@@ -40,8 +40,8 @@ const Contact = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Aditya Ahuja</h2>
-{/*             <p>ML Developer, Web Developer</p> */}
+            <h2 className="card-title">Ganesh Setty</h2>
+            <p>ML Developer, Web Developer</p>
             <div className="card-actions justify-end">
               <a href="#"><button className="btn btn-primary">Contact me</button></a>
             </div>
@@ -60,8 +60,8 @@ const Contact = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Shubhi Jain</h2>
-{/*             <p>ML Developer, Web Developer</p> */}
+            <h2 className="card-title">Yathansh Tewatia</h2>
+            <p>ML Developer, Web Developer</p>
             <div className="card-actions justify-end">
               <a href="#"><button className="btn btn-primary">Contact me</button></a>
             </div>
@@ -72,7 +72,7 @@ const Contact = () => {
 
         {/* Identity card begins */}
 
-{/*         <div className="card w-96 bg-base-100 shadow-xl my-10">
+        <div className="card w-96 bg-base-100 shadow-xl my-10">
           <figure>
             <img
               src="https://picsum.photos/400/200?random=4"
@@ -86,7 +86,7 @@ const Contact = () => {
               <a href="#"><button className="btn btn-primary">Contact me</button></a>
             </div>
           </div>
-        </div> */}
+        </div>
 
         {/* Identity card ends */}
 
